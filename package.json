@@ -1,6 +1,6 @@
 {
-  "name": "@totra/base-ts",
-  "version": "0.0.43",
+  "name": "@totra/ts-oop",
+  "version": "1.0.0",
   "description": "CQRS / Authorization / FeatureFlag / Event-Driven / DDD / Observable framework for typescript. Innovate and rewrite fearlessly. Keep your core logic intact.",
   "type": "module",
   "main": "dist/index.js",
@@ -10,9 +10,6 @@
     ],
     "./*": [
       "./dist/*.js"
-    ],
-    "./zod/*": [
-      "./dist/zod/*.js"
     ]
   },
   "scripts": {
@@ -30,12 +27,7 @@
   "directories": {
     "example": "examples"
   },
-  "peerDependencies": {
-    "zod": "^3.23.8"
-  },
-  "peerDependenciesMeta": {
-    "zod": {
-      "optional": true
-    }
+  "dependencies": {
+    "@standard-schema/spec": "^1.0.0"
   }
 }

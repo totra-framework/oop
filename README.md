@@ -7,10 +7,8 @@ TOTRA is an extraordinarily flexible business logic framework designed to manage
 ## Installation
 
 ```
-npm install / bun add / yarn add @totra/base-ts
+npm install / bun add / yarn add @totra/ts-oop
 ```
-
-For consistency's sake and to later support a more functional approach, this will likely change in the future to `@totra/oop`
 
 ## When NOT to Use TOTRA
 
@@ -119,10 +117,10 @@ export class ChangeUserEmailCommand extends Command<"User:ChangeEmail", {email: 
 }
 ```
 
-Or, if you are using zod as a validator, they can be written as follows:
+Or, if you are using a schema library that implements [standard schema](https://github.com/standard-schema/standard-schema) as a validator, they can be written as follows:
 
 ```ts
-export const ChangeUserEmailCommand = zodCommand({
+export const ChangeUserEmailCommand = schemaCommand({
   type: "User:ChangeEmail", // Unique name of command for observation
   schema: z.object({      
     userId: z.string(),
@@ -428,12 +426,6 @@ The goal is to maintain a stable interface, minimizing breaking changes. TOTRA's
 
 The biggest question is naming conventions - we want this to be as intuitive as possible, and we think there are still some changes that could help with that.
 
-### What's the release roadmap?
+### What's the roadmap?
 
-TOTRA is being validated in various projects to ensure interface stability. The roadmap includes:
-
-- Integrate [Standard Schema](https://github.com/standard-schema/standard-schema?tab=readme-ov-file)
-- Refine names
-- Publish stable 1.0
-
-We aim to publish in the coming months.
+- Improve docs using [Diàtaxis Framework](https://diataxis.fr)
