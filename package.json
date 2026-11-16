@@ -1,9 +1,12 @@
 {
   "name": "@totra/ts-oop",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "description": "CQRS / Authorization / FeatureFlag / Event-Driven / DDD / Observable framework for typescript. Innovate and rewrite fearlessly. Keep your core logic intact.",
   "type": "module",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": [
       "./dist/index.js"
@@ -22,7 +25,8 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
+    "vitest": "^2.0.5",
+    "zod": "^4.3.5"
   },
   "directories": {
     "example": "examples"

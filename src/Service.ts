@@ -141,3 +141,13 @@ export class Service<
     }
   }
 }
+
+export const createService = <
+  E extends Entity,
+  R extends Repository<ClassType<E>, any>
+>(p: {
+  repository: R;
+  eventBus: EventBus<RepositoryMeta<R>>;
+  observer?: Observer;
+  entity: ClassType<E>;
+}) => new Service<E, R>(p);

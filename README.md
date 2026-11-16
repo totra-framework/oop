@@ -1,14 +1,22 @@
-# TOTRA
+# TOTRA - TS OOP
 
 > The one to rule all
 
 TOTRA is an extraordinarily flexible business logic framework designed to manage complex projects. Instead of being prescriptive about infrastructure or deployment, TOTRA focuses solely on building manageable and adaptable software.
 
+TS OOP is a typescript object-oriented programming implementation of Totra.
+
 ## Installation
 
+```bash
+npm install @totra/ts-oop
+# or
+bun add @totra/ts-oop
+# or
+yarn add @totra/ts-oop
 ```
-npm install / bun add / yarn add @totra/ts-oop
-```
+
+The package supports TypeScript 5, 6, and 7. JavaScript applications can use it without installing TypeScript.
 
 ## When NOT to Use TOTRA
 

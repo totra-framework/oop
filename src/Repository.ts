@@ -56,3 +56,15 @@ export class SimpleRepository<E extends ClassType<Entity>>
     return this.applyEvents(entityId, internalEvents);
   }
 }
+
+export const createSimpleRepository = <E extends ClassType<Entity>>(ctx: {
+  entity: E;
+  hydrate: (entityId: string) => Promise<EntityProps<E>>;
+  apply: (
+    entityId: string,
+    internalEvents: EntityClassInternalEvents<E>[]
+  ) => Promise<void>;
+}) => new SimpleRepository<E>({
+  hydrate: ctx.hydrate,
+  apply: ctx.apply,
+});
